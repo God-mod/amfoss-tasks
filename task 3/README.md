@@ -1,0 +1,1 @@
+I don't eaxctly have a Hackerrank username as such coz I login to Hackkerank via my Github account. All the problems which I was able to solve can be viewed under adityar032002 (my hackerrank handle). 
