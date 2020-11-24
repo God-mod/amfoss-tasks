@@ -1,0 +1,49 @@
+Bandit Passwords
+
+Level 0  
+password given bandit0
+
+Level 0 to Level 1
+I used "cat readme" to view contents of file 'readme'
+Password - boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Level 1 to Level 2
+For dashed files, I used "cat ./-" to view contents of dashed file
+Password - CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+Level 2 to Level 3
+For file name with spaces (suppose filename is spaces in this filename, I used " cat spaces\ in\ this\ filename 
+Password - UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+Level 3 to Level 4
+For hidden directories, I first used ls -a to view hidden directory. After finding the directory, I moved into the directory and again searched for more hidden files using same command. Finally I used "cat .hidden" to view file.
+Password - pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+Level 4 to Level 5
+There were a lot of files ( Around 9 of them ) and I had to open each one of them. Finally I executed " cat ./-file07 " and found the password.
+Password -koReBOKuIDDepwhWk7jZC0RTdopnAYKh 
+
+Level 5 to Level 6
+There were a lot of files and I had to find a human-readable ,1033 bytes in size ,not executable file in sepcific. The code i used to locate such a file was "find -type f -readable -size 1033c -not executable "( not exaclty the same but somewhat similar code ).
+cat .file2 gave me the right answer but cat ./-file2 didn't. why?
+Passwword - DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+Level 6 to Level 7
+I had to move out of the directory to "find -user bandit7 -group bandit6 -size 33c" and among the code, found a very obscure "./var/lib/dpkg/info/bandit7.password" whose permission wasn't denied. Then after I "cat ./var/lib/dpkg/info/bandit7.password" I got the password.
+Passwword - HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+Level 7 to Level 8
+In order to simplify my search in a huge file, I used "grep" to find the line number containing the word 'millionth' as " grep -n millionth data.txt " 
+Level 8 to Level 9cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+Level 8 to Level 9
+As the password is within the "only line of text that occurs only once", I used a combo of "sort" and "uniq -u" functions to sort the data.txt file in order and the latter to print out onlu unique lines. Hence the code being "sort data.txt | uniq -u "
+Password - UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Level 9 to Level 10
+The clue given was 'one of the few human-readable strings, preceded by several ‘=’ characters'. So just did a basic "cat data.txt" and read the code to find lots of '======' to find the password next to it.
+Passwword - truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+Level 10 to Level 11
+Had to decode an encoded file using "base64 -d data.txt" and we directly get the password.
+Passwword - IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
